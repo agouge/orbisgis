@@ -13,6 +13,7 @@
         <url>http://www.orbisgis.org</url>
         <modules>
                 <module>wms-client</module>
+                <module>gdmstest</module>
                 <module>gdms</module>
 		<module>bundles/plugin-test</module>
                 <module>orbisgis-core</module>
