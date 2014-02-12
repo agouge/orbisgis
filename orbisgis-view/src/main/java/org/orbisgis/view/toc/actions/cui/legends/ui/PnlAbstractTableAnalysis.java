@@ -316,7 +316,9 @@ public abstract class PnlAbstractTableAnalysis<K, U extends LineParameters>
 
         // Table
         glob.add(tablePanel, "span 2, growx");
+        glob.setVisible(true);
         this.add(glob);
+        setVisible(true);
         this.revalidate();
     }
 

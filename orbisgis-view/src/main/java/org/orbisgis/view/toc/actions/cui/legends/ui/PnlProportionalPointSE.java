@@ -122,7 +122,9 @@ public final class PnlProportionalPointSE extends PnlProportional {
                     prev.addMouseListener(l);
                 }
                 glob.add(new PreviewPanel(getPreview()));
+                glob.setVisible(true);
                 this.add(glob);
+                setVisible(true);
         }
 
         /**

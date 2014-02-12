@@ -139,7 +139,9 @@ public final class PnlUniquePointSE extends PnlUniqueSymbolSE {
 
                 glob.add(new PreviewPanel(getPreview()), "growx");
 
+                glob.setVisible(true);
                 this.add(glob);
+                setVisible(true);
         }
 
         // ************************* UIPanel ***************************

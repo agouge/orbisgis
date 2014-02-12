@@ -123,7 +123,9 @@ public final class PnlUniqueAreaSE extends PnlUniqueSymbolSE {
 
                 glob.add(new PreviewPanel(getPreview()),
                         "cell 1 1, growx");
+                glob.setVisible(true);
                 this.add(glob);
+                setVisible(true);
         }
 
         // ************************* UIPanel ***************************

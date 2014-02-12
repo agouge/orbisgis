@@ -96,7 +96,9 @@ public final class PnlUniqueLineSE extends PnlUniqueSymbolSE {
                         showCheckbox,
                         displayUOM));
                 glob.add(new PreviewPanel(getPreview()));
+                glob.setVisible(true);
                 this.add(glob);
+                setVisible(true);
         }
 
         // ************************* UIPanel ***************************
