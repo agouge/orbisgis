@@ -236,6 +236,15 @@ public class SQLConsolePanel extends JPanel {
                         OrbisGISIcon.getIcon("builtinfunctionmap"),
                         EventHandler.create(ActionListener.class,sqlFunctionsPanel,"switchPanelVisibilityState"),
                         null).setLogicalGroup("custom"));
+                // Display h2gis.org documentation
+                actions.addAction(new DefaultAction(SQLAction.A_SHOW_DOC,
+                        I18N.tr("Online doc"),
+                        I18N.tr("Display h2gis.org documentation"),
+                        OrbisGISIcon.getIcon("builtinfunctionmap"),
+                        EventHandler.create(ActionListener.class,
+                                sqlFunctionsPanel,
+                                "showH2GISDocumentation"),
+                        null).setLogicalGroup("custom"));
         }
 
         /**

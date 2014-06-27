@@ -40,6 +40,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.beans.EventHandler;
+import java.net.URI;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -131,6 +132,25 @@ public class SQLFunctionsPanel extends JPanel {
                 } else {
                         expand();
                 }
+        }
+
+        public void showH2GISDocumentation() {
+            final FunctionElement f = list.getSelectedValue();
+            if (f != null) {
+                openWebpage(URI.create("http://www.h2gis.org/docs/dev/"
+                        + f.getFunctionName()));
+            }
+        }
+
+        public static void openWebpage(URI uri) {
+            Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
+            if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
+                try {
+                    desktop.browse(uri);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
         /**
