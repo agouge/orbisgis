@@ -35,6 +35,7 @@ import org.orbisgis.coremap.renderer.se.parameter.SeParameter;
 import org.orbisgis.coremap.renderer.se.parameter.ValueReference;
 import org.orbisgis.coremap.renderer.se.parameter.string.StringAttribute;
 import org.orbisgis.coremap.renderer.se.parameter.string.StringParameter;
+import org.orbisgis.legend.structure.parameter.AbstractAttributeLegend;
 import org.orbisgis.legend.structure.parameter.ParameterLegend;
 import org.orbisgis.legend.structure.recode.type.TypeEvent;
 import org.orbisgis.legend.structure.recode.type.TypeListener;
@@ -55,7 +56,7 @@ import java.util.Set;
  * @author Alexis
  * @author Adam Gouge (translation from Scala to Java)
  */
-abstract class RecodedLegend implements ParameterLegend {
+abstract class RecodedLegend extends AbstractAttributeLegend implements ParameterLegend {
 
     private String field = "";
     private List<TypeListener> listeners = new ArrayList<>();
