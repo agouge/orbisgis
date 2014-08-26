@@ -45,11 +45,12 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * This trait intends to provide some useful methods for the representation of
- * parameters included in unique value classifications. We can retrieve the
- * {@link ValueReference} used to get data from the input source, change the
- * field on which the analysis is made. Finally, we can add listeners that will
- * be notified when the type of the inner parameter changes.
+ * This abstract class intends to provide some useful methods for the
+ * representation of parameters included in unique value classifications. We
+ * can retrieve the {@link ValueReference} used to get data from the input
+ * source, change the field on which the analysis is made. Finally, we can add
+ * listeners that will be notified when the type of the inner parameter
+ * changes.
  *
  * @author Alexis
  * @author Adam Gouge (translation from Scala to Java)
