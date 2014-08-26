@@ -124,7 +124,7 @@ abstract class RecodedLegend implements ParameterLegend {
     public Set<String> getKeys() {
         final SeParameter parameter = getParameter();
         if (parameter instanceof Literal) {
-            return new HashSet<String>();
+            return new HashSet<>();
         } else if (parameter instanceof Recode) {
             return ((Recode) parameter).getKeys();
         }
