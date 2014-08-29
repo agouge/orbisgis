@@ -29,6 +29,7 @@
 
 package org.orbisgis.legend.structure.recode;
 
+import org.orbisgis.coremap.renderer.se.parameter.SeParameter;
 import org.orbisgis.coremap.renderer.se.parameter.color.ColorLiteral;
 import org.orbisgis.coremap.renderer.se.parameter.color.ColorParameter;
 
@@ -36,18 +37,22 @@ public class RecodedColor extends RecodedLegend {
   
   private ColorParameter parameter = new ColorLiteral();
 
-//  /**
-//   * Tries to build a RecodedColor using the {@code ColorParameter} given in
-//   * argument.
-//   * @param param
-//   */
-//  def this(param : ColorParameter) = {
-//    this
-//    setParameter(param)
-//  }
-//
-
   /**
+   * Tries to build a RecodedColor using the {@code ColorParameter} given in
+   * argument.
+   * @param param
+   */
+  public RecodedColor(ColorParameter param) {
+    this();
+    setParameter(param);
+  }
+
+    public RecodedColor() {
+
+    }
+
+
+    /**
    * Gets the underlying parameter.
    * @return
    */
@@ -55,12 +60,13 @@ public class RecodedColor extends RecodedLegend {
       return parameter;
   }
 
-//  /**
-//   * Sets parameter to s
-//   * @param s
-//   * @throws IllegalArgumentException if s is neither a Recode2String nor a StringLiteral
-//   */
-//  def setParameter(s : SeParameter) : Unit = s match {
+  /**
+   * Sets parameter to s
+   * @param s
+   * @throws IllegalArgumentException if s is neither a Recode2String nor a StringLiteral
+   */
+  public void setParameter(SeParameter s) {
+//        s match
 //    case a : ColorLiteral =>
 //      parameter = a
 //      fireTypeChanged()
@@ -69,7 +75,7 @@ public class RecodedColor extends RecodedLegend {
 //      field = getValueReference.getColumnName
 //      fireTypeChanged()
 //    case _ => throw new IllegalArgumentException("This class must be built from a  string recode or literal.")
-//  }
+  }
 //
 //  /**
 //   * Gets the number of elements registered in this analysis.
